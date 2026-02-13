@@ -113,7 +113,7 @@ openclaw plugins update wechat
 
 ### 配置
 
-1. 联系客服购买 API Key
+1. 获取 API Key（项目优化中，需要体验的可以先进群等待）
 2. 配置插件：
 
 ```bash
