@@ -1,4 +1,4 @@
-# openclaw-wechat
+# openclaw-wechatify
 
 WeChat (微信) channel plugin for [OpenClaw](https://github.com/openclaw/openclaw).
 
@@ -11,7 +11,7 @@ WeChat (微信) channel plugin for [OpenClaw](https://github.com/openclaw/opencl
 ### Installation
 
 ```bash
-openclaw plugins install @canghe/openclaw-wechat
+openclaw plugins install openclaw-wechatify
 ```
 
 ### Upgrade
@@ -46,16 +46,16 @@ openclaw config set channels.wechat.enabled true
 channels:
   wechat:
     enabled: true
-    apiKey: "wc_live_xxxxxxxxxxxxxxxx"    # Required
-    proxyUrl: "http://your-proxy:3000"    # Required - Proxy service URL
+    apiKey: wc_live_xxxxxxxxxxxxxxxx # Required
+    proxyUrl: 'http://your-proxy:3000' # Required - Proxy service URL
 
     # Webhook configuration (required for cloud deployment)
-    webhookHost: "1.2.3.4"                # Your server public IP or domain
-    webhookPort: 18790                    # Default: 18790
-    webhookPath: "/webhook/wechat"        # Default: /webhook/wechat
+    webhookHost: 1.2.3.4 # Your server public IP or domain
+    webhookPort: 18790 # Default: 18790
+    webhookPath: /webhook/wechat # Default: /webhook/wechat
 
     # Optional settings
-    deviceType: "mac"                     # "ipad" or "mac", default: "ipad"
+    deviceType: mac # "ipad" or "mac", default: "ipad"
 ```
 
 ### First-time Login
@@ -88,11 +88,11 @@ channels:
   wechat:
     accounts:
       work:
-        apiKey: "wc_live_work_xxx"
-        webhookHost: "1.2.3.4"
+        apiKey: wc_live_work_xxx
+        webhookHost: 1.2.3.4
       personal:
-        apiKey: "wc_live_personal_xxx"
-        webhookHost: "1.2.3.4"
+        apiKey: wc_live_personal_xxx
+        webhookHost: 1.2.3.4
 ```
 
 ---
@@ -102,7 +102,7 @@ channels:
 ### 安装
 
 ```bash
-openclaw plugins install @canghe/openclaw-wechat
+openclaw plugins install openclaw-wechatify
 ```
 
 ### 升级
@@ -137,16 +137,16 @@ openclaw config set channels.wechat.enabled true
 channels:
   wechat:
     enabled: true
-    apiKey: "wc_live_xxxxxxxxxxxxxxxx"    # 必填
-    proxyUrl: "http://你的代理:3000"      # 必填 - 代理服务地址
+    apiKey: wc_live_xxxxxxxxxxxxxxxx # 必填
+    proxyUrl: 'http://你的代理:3000' # 必填 - 代理服务地址
 
     # Webhook 配置（云服务器部署必填）
-    webhookHost: "1.2.3.4"                # 服务器公网 IP 或域名
-    webhookPort: 18790                    # 默认: 18790
-    webhookPath: "/webhook/wechat"        # 默认: /webhook/wechat
+    webhookHost: 1.2.3.4 # 服务器公网 IP 或域名
+    webhookPort: 18790 # 默认: 18790
+    webhookPath: /webhook/wechat # 默认: /webhook/wechat
 
     # 可选配置
-    deviceType: "mac"                     # "ipad" 或 "mac"，默认: "ipad"
+    deviceType: mac # "ipad" 或 "mac"，默认: "ipad"
 ```
 
 ### 首次登录
@@ -179,11 +179,11 @@ channels:
   wechat:
     accounts:
       work:
-        apiKey: "wc_live_work_xxx"
-        webhookHost: "1.2.3.4"
+        apiKey: wc_live_work_xxx
+        webhookHost: 1.2.3.4
       personal:
-        apiKey: "wc_live_personal_xxx"
-        webhookHost: "1.2.3.4"
+        apiKey: wc_live_personal_xxx
+        webhookHost: 1.2.3.4
 ```
 
 ---
@@ -194,15 +194,13 @@ channels:
 
 ## 交流群
 
-关于 bot 进群交流请扫码关注，并回复：openclaw-wechat
+关于 bot 进群交流请扫码关注，并回复：openclaw-wechatify
 
 ![](./images/%E7%BE%A4%E8%81%8A%E4%BA%A4%E6%B5%81.bmp)
 
-
-
 ## 十一、star 趋势图
 
-[![Star History Chart](https://api.star-history.com/svg?repos=freestylefly/openclaw-wechat&type=Date)](https://star-history.com/#freestylefly/openclaw-wechat&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=ZaneL1u/wechatify&type=Date)](https://star-history.com/#ZaneL1u/wechatify&Date)
 
 ## License
 

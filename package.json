@@ -1,17 +1,13 @@
 {
-  "name": "@canghe/openclaw-wechat",
-  "version": "0.1.0",
+  "name": "openclaw-wechatify",
   "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.30.0",
   "description": "OpenClaw WeChat channel plugin via Proxy API",
   "license": "MIT",
-  "files": [
-    "index.ts",
-    "src",
-    "openclaw.plugin.json"
-  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/woniu/openclaw-wechat.git"
+    "url": "git+https://github.com/ZaneL1u/wechatify.git"
   },
   "keywords": [
     "openclaw",
@@ -20,6 +16,19 @@
     "chatbot",
     "ai",
     "claude"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "openclaw.plugin.json"
   ],
   "openclaw": {
     "extensions": [
@@ -31,29 +40,37 @@
       "selectionLabel": "WeChat (微信)",
       "docsPath": "/channels/wechat",
       "docsLabel": "wechat",
-      "blurb": "WeChat channel via Proxy API. 购买 API Key 请联系客服",
+      "blurb": "WeChat channel via Proxy API.",
       "order": 80
     },
     "install": {
-      "npmSpec": "@canghe/openclaw-wechat",
+      "npmSpec": "openclaw-wechatify",
       "localPath": ".",
       "defaultChoice": "npm"
     }
   },
-  "dependencies": {},
-  "devDependencies": {
-    "@types/node": "^20.10.0",
-    "openclaw": ">=2026.2.9",
-    "tsx": "^4.7.0",
-    "typescript": "^5.3.0",
-    "zod": "^3.22.4"
+  "scripts": {
+    "build": "tsdown",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest run",
+    "test:unit": "vitest run test/unit",
+    "test:integration": "vitest run test/integration",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "openclaw": ">=2026.2.9"
   },
-  "scripts": {
-    "test": "npx tsx test-channel.ts",
-    "test:plugin": "npx tsx test-plugin.ts",
-    "typecheck": "tsc --noEmit"
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.4.3",
+    "@types/node": "^22.19.11",
+    "eslint": "^10.0.0",
+    "openclaw": ">=2026.2.17",
+    "tsdown": "^0.20.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18",
+    "zod": "^4.3.6"
   }
 }
